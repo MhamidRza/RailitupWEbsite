@@ -1,0 +1,1 @@
+import{u as a}from"./chunk-RG3SQ5IQ-DNUn67BB.js";import{j as r}from"./index-DK8HSD9y.js";var e=()=>{const o=a().components;return r.jsx("div",{className:"or-separator-horizontal",children:r.jsx("span",{className:"or-text",children:o.orSeparator})})};export{e as H};
